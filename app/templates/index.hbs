@@ -1,0 +1,13 @@
+<div class="container">
+
+  <h2>The Message Board.</h2>
+  <ul>
+    {{#each model as |message|}}
+      {{message-tile message=message}}
+    {{/each}}
+  </ul>
+
+  {{new-message saveMessage2="saveMessage3"}}
+
+
+</div>
