@@ -1,0 +1,15 @@
+<div class="container">
+
+  <div class="page-header">
+    <h1>Riddles <small>Are fun.</small></h1>
+  </div>
+  <ul>
+    {{#each model.messages as |message|}}
+      {{message-tile message=message}}
+    {{/each}}
+  </ul>
+
+  {{new-message saveMessage2="saveMessage3"}}
+
+
+</div>
