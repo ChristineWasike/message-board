@@ -1,0 +1,24 @@
+{{#if addNewMessage}}
+  <div class="col-md-6">
+    <form>
+      <div class="form-group">
+        {{textarea class="form-control" placeholder="Riddle" rows="5" value=riddle}}
+      </div>
+
+      <div class="form-group">
+        {{input class="form-control" value=author id="author" placeholder="Author"}}
+      </div>
+
+      <div class="form-group">
+        {{textarea class="form-control" placeholder="Hint" rows="3" value=hint}}
+      </div>
+
+      <div class="form-group">
+        {{input class="form-control" value=image id="image" placeholder="ImageURL"}}
+      </div>
+      <button class="btn btn-default" {{action 'saveMessage1'}}>Save</button>
+    </form>
+  </div>
+{{else}}
+  <button class="btn1 btn btn-warning" {{action 'messageFormShow'}}>Add</button>
+{{/if}}
