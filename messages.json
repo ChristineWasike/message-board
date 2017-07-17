@@ -1,0 +1,37 @@
+{
+  "messages": [{
+    "id": 1,
+    "riddle": "Lighter than what I'm made of and I hide more of myself than you can see.What am I?",
+    "author": "Adams John",
+    "hint": "I am cold",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Iceberg_Ilulissat.jpg/400px-Iceberg_Ilulissat.jpg"
+  }, {
+    "id": 2,
+    "riddle": "I can’t be used unless I am broken. What am I?",
+    "author": "Bach Johann Sebastian",
+    "hint": "Drop me and you wil break me",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Iceberg_Ilulissat.jpg/400px-Iceberg_Ilulissat.jpg"
+  }, {
+    "id": 3,
+    "riddle": "I always go up and never come down. What am I",
+    "author": "Barber Samuel",
+    "hint": "Measure me in years",
+    "image": "https://1d4chan.org/images/thumb/e/e5/End_of_the_line.jpg/400px-End_of_the_line.jpg"
+  }, {
+    "id": 4,
+    "riddle": "I have holes in my top and bottom my left and right and my middle. But still I hold water. What am I?",
+    "author": "Beethoven Ludwig Van",
+    "hint": "I am full of holes",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/%C3%89ponge_type_3_%281%29.jpg/440px-%C3%89ponge_type_3_%281%29.jpg"
+  }, {
+    "id": 5,
+    "riddle": "Wetter and wetter I get the more I dry. Wring me and I will cry.What am I?",
+    "author": "Brahms Johannes",
+    "hint": "I am soft",
+    "image": "https://creativecounselor.files.wordpress.com/2014/05/back2basicslargebutton1.jpg?w=900"
+  }],
+  "answers": [{
+    "author": "Lexi",
+    "response": "How about an iceberg"
+  }]
+}
