@@ -8,7 +8,7 @@ export default Ember.Route.extend({
     });
   },
   actions: {
-    saveMessage3(params) {
+    saveMessage(params) {
       var newMessage = this.store.createRecord('message', params);
       newMessage.save();
       this.transitionTo('index');
