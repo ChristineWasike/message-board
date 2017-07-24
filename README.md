@@ -1,7 +1,6 @@
-# message-board
-
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+# Message Board.
+[Deploy](https://message-board-26105.firebaseapp.com/)
+This project is designed to create a platform for users to share riddles and post answersto then if they can guess rightly.
 
 ## Prerequisites
 
