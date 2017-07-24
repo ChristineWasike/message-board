@@ -6,7 +6,7 @@ export default Ember.Route.extend({
   },
   actions: {
     update(message, params) {
-      Object.keys(params).forEach(function(key) {
+      Object.keys(params).forEach(function (key) {
         if (params[key] !== undefined) {
           message.set(key, params[key]);
         }
@@ -16,25 +16,38 @@ export default Ember.Route.extend({
     },
     saveAnswer(params) {
       var newAnswer = this.store.createRecord('answer', params);
-      var message = params.message;
-      message.get('answers').addObject(newAnswer);
-      newAnswer.save().then(function() {
-        return message.save();
+      var message = params.response;
+      params.model.get('answers').addObject(newAnswer);
+      newAnswer.save().then(function () {
+        return params.model.save();
       });
       this.transitionTo('message', message);
     },
     destroyMessage(message) {
       message.destroyRecord();
-      this.transitionTo('index');
+      this.transitionTo('message');
     },
     destroyAnswer(answer) {
-      var answer_deletions = message.get('answers').map(function(answer) {
-        return answer.destroyRecord();
+      answer.destroyRecord();
+      this.transitionTo('message');
+    },
+    like(message) {
+      var currentLikes = message.get('likes')
+      var totalLikes = currentLikes += 1
+      message.setProperties({
+        likes: totalLikes
       });
-      Ember.RSVP.all(answer_deletions).then(function() {
-        return message.destroyRecord();
-      });
-      this.transitionTo('index');
+      message.save();
+      this.transitionTo('index')
+    },
+    dislike(message) {
+      var currentDislikes = message.get('dislikes')
+      var totalDislikes = currentDislikes += 1
+      message.setProperties({
+        dislikes: totalDislikes
+      })
+      message.save();
+      this.transitionTo('index')
     }
   }
 });

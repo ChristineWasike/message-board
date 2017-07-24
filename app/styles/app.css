@@ -4,3 +4,31 @@ body {
 button {
   border-radius: 8px;
 }
+#update-btn {
+  margin-left: 0px;
+}
+#delete-btn {
+  margin-right: 0px;
+}
+.well {
+  box-shadow: 5px 5px 5px #888888;
+}
+.answer {
+  margin-right: 50px;
+}
+.picture {
+  height:40%; 
+  width:40%;
+  margin-top: 60px;
+}
+.macho{
+  margin-top:0px; 
+  margin-bottom:0px;
+  margin-left: 900px;
+}
+.danger {
+  margin-left: 500px;
+  margin-bottom:-5px;
+}
+#like {
+}
