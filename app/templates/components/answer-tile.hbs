@@ -1,15 +1,15 @@
 <div class="col-md-6 col-md-offset-3 well answer">
-          <h3>Guess</h3>
-    <p>{{answer.author}}'s guess to the riddle is {{answer.response}}</p>
-    <br>
-    <p>
-        <button type="button" id="like" class="btn btn-success btn-small"{{action 'downvote' answer }}>{{answer.upvote}}<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-</button>
+        <h3>Guess</h3>
+        <p>{{answer.author}}'s guess to the riddle is {{answer.response}}</p>
+        <br>
+        <p>
+        <button type="button" id="like" class="btn btn-success btn-small" {{action 'upVote' answer }}><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>{{answer.upvote}}
+        </button>
 
-        <button type="button" id="like" class="btn btn-warning btn-small"{{action 'upvote' answer }}>{{answer.downvote}}<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
-</button>
+        <button type="button" id="like" class="btn btn-warning btn-small" {{action 'downVote' answer }}><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>{{answer.downvote}}
+        </button>
 
         <button class="btn btn-danger btn-small danger" {{action 'delete' answer}}><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
-    </p>
+        </p>
 
 </div>

@@ -2,9 +2,9 @@
  <p> {{update-message message=model update="update"}}
   <h2>More information about the riddle you've selected.</h2> </p>
   <div class="row">
-    {{message-detail message=model destroyMessage="destroyMessage" destroyAnswer="destroyAnswer"}} 
+    {{message-detail message=model destroyMessage="destroyMessage" destroyAnswer="destroyAnswer" upVote="upVote" downVote="downVote"}} 
   </div>
   <div class="row">
-    {{new-answer saveAnswer="saveAnswer" model=model}}
+     {{new-answer saveAnswer="saveAnswer" model=model}} 
   </div>
 </div>

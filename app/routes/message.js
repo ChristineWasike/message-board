@@ -16,7 +16,7 @@ export default Ember.Route.extend({
     },
     saveAnswer(params) {
       var newAnswer = this.store.createRecord('answer', params);
-      var message = params.response;
+      var message = params.message;
       params.model.get('answers').addObject(newAnswer);
       newAnswer.save().then(function () {
         return params.model.save();
@@ -31,23 +31,21 @@ export default Ember.Route.extend({
       answer.destroyRecord();
       this.transitionTo('message');
     },
-    like(message) {
-      var currentLikes = message.get('likes')
-      var totalLikes = currentLikes += 1
-      message.setProperties({
-        likes: totalLikes
+    upVote(answer) {
+      var currentUpvote = answer.get('upvote');
+      var totalUpvotes = (currentUpvote += 1);
+      answer.setProperties({
+        upvote: totalUpvotes
       });
-      message.save();
-      this.transitionTo('index')
+      answer.save();
     },
-    dislike(message) {
-      var currentDislikes = message.get('dislikes')
-      var totalDislikes = currentDislikes += 1
-      message.setProperties({
-        dislikes: totalDislikes
-      })
-      message.save();
-      this.transitionTo('index')
-    }
+    downVote(answer) {
+      var currentDownvote = answer.get('downvote');
+      var totalDownvotes = (currentDownvote += 1);
+      answer.setProperties({
+        downvote: totalDownvotes
+      });
+      answer.save();
+    },
   }
 });

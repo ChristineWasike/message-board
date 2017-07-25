@@ -7,8 +7,7 @@ export default Ember.Component.extend({
         author: this.get('author'),
         response: this.get('response'),
         model: this.get('model'),
-        upvote: 0,
-        downvote:0
+        createdDate: new Date().toISOString().substring(0, 10)
       };
       this.sendAction('saveAnswer', params);
     }

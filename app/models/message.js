@@ -5,5 +5,8 @@ export default DS.Model.extend({
   author: DS.attr(),
   hint: DS.attr(),
   image: DS.attr(),
-  answers: DS.hasMany('answer', {async: true})
+  createDate: DS.attr(),
+  upvote: DS.attr('number'),
+  downvote: DS.attr('number'),
+  answers: DS.hasMany('answer', { async: true })
 });

@@ -5,19 +5,20 @@
       {{message.riddle}}
       <br> asked by ~{{message.author}}
       <div class="container" style="height:40% width:40%">
-        <p>
-          <button type="button" id="like" class="btn btn-success btn-small" {{action 'downvote' message }}>{{answer.upvote}}<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+        {{!-- <p>
+          <button type="button" id="like" class="btn btn-success btn-small" {{action 'downVote' message }}>{{answer.upvote}}<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
           </button>
 
-          <button type="button" id="like" class="btn btn-warning btn-small" {{action 'upvote' message }}>{{answer.downvote}}<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+          <button type="button" id="like" class="btn btn-warning btn-small" {{action 'upVote' message }}>{{answer.downvote}}<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
           </button>
-        </p>
+        </p> --}}
         <div id="delete-btn" class="col-md-1"><button class="btn btn-danger" {{action 'delete' message}}><span  class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></div>
       </div>
     </div>
 
     <ul>
-      {{#each message.answers as |answer|}} {{answer-tile answer=answer destroyAnswer="destroyAnswer"}} {{/each}}
+      {{#each message.answers as |answer|}} 
+      {{answer-tile answer=answer destroyAnswer="destroyAnswer" saveAnswer="saveAnswer" upVote="upVote" downVote="downVote"}} {{/each}}
     </ul>
   </div>
 </div>
