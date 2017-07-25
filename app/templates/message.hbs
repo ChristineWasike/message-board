@@ -1,9 +1,10 @@
 <div class="container">
-
-  <h2>More information about the riddle you've selected.</h2> {{update-message message=model update="update"}}
-
-  {{message-detail message=model destroyMessage="destroyMessage" destroyAnswer="destroyAnswer"}}
-  <br>
-  <br> {{new-answer saveAnswer="saveAnswer" message=model}}
-
+ <p> {{update-message message=model update="update"}}
+  <h2>More information about the riddle you've selected.</h2> </p>
+  <div class="row">
+    {{message-detail message=model destroyMessage="destroyMessage" destroyAnswer="destroyAnswer"}} 
+  </div>
+  <div class="row">
+    {{new-answer saveAnswer="saveAnswer" model=model}}
+  </div>
 </div>

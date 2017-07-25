@@ -1,12 +1,16 @@
-<p>
-  {{#link-to 'message' message.id}}{{message.riddle}} <br> asked by ~{{message.author}}{{/link-to}}
-  {{#if isImageShowing}}
+<div class="row">
+  <div class="col-md-6 col-md-offset-3  well">
     <p>
-      <img src= {{message.image}} alt= {{message.hint}} {{action 'imageHide'}}>
-      <br>
-      <hr>
+      <div class="col-md-3 picture">
+        <img class="image img-responsive" src={{message.image}} alt={{message.hint}} {{action 'imageHide'}}>
+      </div>
     </p>
-  {{else}}
-    <button class="btn btn-info" {{action 'imageShow'}}>Image</button>
-  {{/if}}
-</p>
+    <div class="col-md-6">
+      <h3>Riddle</h3>
+      <p>
+        {{#link-to 'message' message.id}}{{message.riddle}} <br> asked by ~{{message.author}}{{/link-to}}
+      </p>
+    </div>
+
+  </div>
+</div>

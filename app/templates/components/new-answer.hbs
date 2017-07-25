@@ -1,17 +1,27 @@
-{{#if addNewAnswer}}
-  <h3>Your guesses</h3>
-  <div class="col-md-6">
-    <form>
-      <div class="form-group">
-        {{input class="form-control" value=author placeholder="Author" id="author"}}
+<a class="btn btn-primary" data-toggle="modal" href='#modal-id'>Add answer</a>
+<div class="modal fade" id="modal-id">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Modal title</h4>
       </div>
-      <div class="form-group">
-        {{textarea class="form-control" placeholder="Response" rows="3" value=response id="response"}}
+      <div class="modal-body">
+        <h3>Your guesses</h3>
+        <form>
+          <div class="form-group">
+            {{input class="form-control" value=author placeholder="Author" id="author"}}
+          </div>
+          <div class="form-group">
+            {{textarea class="form-control" placeholder="Response" rows="3" value=response id="response"}}
+          </div>
+          
+        </form>
       </div>
-      <button class="btn btn-default" {{action 'saveAnswer'}}>Save</button>
-    </form>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"  data-dismiss="modal" {{action 'saveAnswer'}}>Save Answer</button>
+      </div>
+    </div>
   </div>
-
-{{else}}
-  <button {{action 'answerFormShow'}}>Answer</button>
-{{/if}}
+</div>

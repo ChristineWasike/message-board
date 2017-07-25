@@ -4,12 +4,14 @@
     <h1>Riddles <small>Are fun.</small></h1>
   </div>
   <ul>
+    <div class="row">
     {{#each model.messages as |message|}}
-      {{message-tile message=message}}
+    {{question-popularity message}}  {{message-tile message=message}}
     {{/each}}
+      </div>
   </ul>
 
-  {{new-message saveMessage2="saveMessage3"}}
+  {{new-message saveMessage="saveMessage"}}
 
 
 </div>

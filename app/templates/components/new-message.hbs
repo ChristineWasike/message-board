@@ -1,24 +1,35 @@
-{{#if addNewMessage}}
-  <div class="col-md-6">
-    <form>
-      <div class="form-group">
-        {{textarea class="form-control" placeholder="Riddle" rows="5" value=riddle}}
-      </div>
+<a class="btn btn-primary" data-toggle="modal" href='#modal-id'>Add Riddle</a>
+<div class="modal fade" id="modal-id">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        {{textarea class="form-control" placeholder="Riddle" rows="5" value=riddle}}
+                    </div>
 
-      <div class="form-group">
-        {{input class="form-control" value=author id="author" placeholder="Author"}}
-      </div>
+                    <div class="form-group">
+                        {{input class="form-control" value=author id="author" placeholder="Author"}}
+                    </div>
 
-      <div class="form-group">
-        {{textarea class="form-control" placeholder="Hint" rows="3" value=hint}}
-      </div>
+                    <div class="form-group">
+                        {{textarea class="form-control" placeholder="Hint" rows="3" value=hint}}
+                    </div>
 
-      <div class="form-group">
-        {{input class="form-control" value=image id="image" placeholder="ImageURL"}}
-      </div>
-      <button class="btn btn-default" {{action 'saveMessage1'}}>Save</button>
-    </form>
-  </div>
-{{else}}
-  <button class="btn1 btn btn-warning" {{action 'messageFormShow'}}>Add</button>
-{{/if}}
+                    <div class="form-group">
+                        {{input class="form-control" value=image id="image" placeholder="ImageURL"}}
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" {{action 'saveMessage'}}>Save Riddle</button>
+            </div>
+        </div>
+    </div>
+</div>
